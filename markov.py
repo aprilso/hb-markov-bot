@@ -85,7 +85,14 @@ async def on_message(message):
     if message.author == client.user:
         return 
 
-    if message.content.startswith('hello'):
+    if message.content.startswith('$specialbot'):
         await message.channel.send(random_text)
 
 client.run(os.environ['DISCORD_TOKEN'])
+
+
+#-------
+#To start up this program:
+#1. activate the virtual environment: source env/bin/activate
+#2. run (to use our specific discord token): source secrets.sh
+#3. run (to start the bot): python3 markov.py green-eggs.txt
